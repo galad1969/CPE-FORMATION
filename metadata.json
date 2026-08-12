@@ -1,0 +1,6 @@
+{
+  "name": "CPE Formation",
+  "description": "Soutien et formation pour l'obtention du diplôme de CPE",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
