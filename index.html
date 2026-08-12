@@ -1,9 +1,31 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
+    <script>
+      (function() {
+        try {
+          if (typeof window !== 'undefined') {
+            var nativeFetch = window.fetch;
+            var currentFetch = nativeFetch ? nativeFetch.bind(window) : undefined;
+            Object.defineProperty(window, 'fetch', {
+              get: function() {
+                return currentFetch;
+              },
+              set: function(v) {
+                currentFetch = v;
+              },
+              configurable: true,
+              enumerable: true
+            });
+          }
+        } catch (e) {
+          // ignore
+        }
+      })();
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
+    <title>CPE Formation - Diplôme de CPE</title>
   </head>
   <body>
     <div id="root"></div>

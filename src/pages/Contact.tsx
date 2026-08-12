@@ -1,13 +1,13 @@
 import { motion } from 'motion/react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
-import { useState } from 'react';
+import { useState, type FormEvent } from 'react';
 
 export default function Contact() {
   const [formState, setFormState] = useState({
     status: 'idle', // idle, submitting, success
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     setFormState({ status: 'submitting' });
     // Simulate form submission
